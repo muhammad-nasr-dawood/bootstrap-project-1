@@ -1,0 +1,69 @@
+.navbar-nav a.active{
+    color: brown !important;
+    font-weight: bold !important;
+}
+
+.navbar-nav a{
+    position: relative;
+}
+
+@media (max-width: 992px) {
+    #navbarSupportedContent{
+        background-color: rgba(0, 0, 0, 0.80) !important;
+    }
+}
+
+.navbar-nav a::after{
+    position: absolute;
+    content: "";
+    background-color:brown;
+    width: 0%;
+    height: 1px;
+    left: 50%;
+    bottom: -2%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* when we do hover on after then make the following on the after pseudo element */
+.navbar-nav a:hover::after{
+    width: 80%;
+    left: 10%;
+}
+
+@media (max-width: 992px) {
+    .navbar-nav a:hover::after{
+        width: 100%;
+        left: 0%;
+    }
+}
+
+.navbar-nav a:hover{
+    color: brown;
+    /* font-weight: bold; */
+}
+
+/* end nav bar section  */
+
+/* start main */
+.main{
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.main-icons a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+
+.main-icons a:hover{
+    border: 2px solid brown;
+    color: brown !important;
+}
+/* end main */
